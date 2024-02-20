@@ -59,19 +59,35 @@
 ## Well-Formed XML
 - XML představuje velice jednoduchý formát kódu, jelikož je struktura téměř celá na vás
 - Existuje pouze pár pravidel XML syntaxe pro považování za Well-Formed
-  1) Musí obsahovat kořenový element (nemá sourozence, pouze děti)
-  2) Prolog (specifikování kódování) musí být prvním řádkem souboru
-  3) Elementy musí být uzavřené (Kromě prologu)
-  4) Značky jsou Case-Sensitive
-  5) Elementy musí být řádně zanořené, nesmí se křížit
-  6) Hodnoty atributů musí být v uvozovkách
-  7) Znaky jako <, & mají speciální význam, proto se musí vkládat jako &lt, &amp
-  8) Komentáře <!-- ... --> nesmí obsahovat dvě pomlčky jinde, než na konci komenáře
-  9) Bílé znaky nejsou ořezávány
-  10) Přechod na nový řádek je pomocí znaku LF (line feed) - Na to je nutné si dát pozor ve Windows
-- Pro otestování Well-Formed můžeme použít třeba https://www.w3schools.com/xml/xml_validator.asp
+  1) <b>Musí obsahovat kořenový element (nemá sourozence, pouze děti)</b>
+  2) <b>Prolog (specifikování kódování) musí být prvním řádkem souboru</b>
+  3) <b>Elementy musí být uzavřené (Kromě prologu)</b>
+  4) <b>Značky jsou Case-Sensitive</b>
+  5) <b>Elementy musí být řádně zanořené, nesmí se křížit</b>
+  6) <b>Hodnoty atributů musí být v uvozovkách</b>
+  7) <b>Znaky jako <, & mají speciální význam, proto se musí vkládat jako &lt, &amp</b>
+  8) <b>Komentáře <!-- ... --> nesmí obsahovat dvě pomlčky jinde, než na konci komenáře</b>
+  9) <b>Bílé znaky nejsou ořezávány</b>
+  10) <b>Přechod na nový řádek je pomocí znaku LF (line feed) - Na to je nutné si dát pozor ve Windows</b>
+- Pro otestování Well-Formed můžeme použít třeba https://www.w3schools.com/xml/xml_validator.asp</b>
 ## Návrh XML Stromu
 - XML nemá definovaný standardní model pro grafickou reprezentaci
 - Jako jednoduchý model pro naše účely budeme používat <br>
-![image text]([XML Tree.png])
-- 
+![alt text](https://github.com/ulricht01/PRI/blob/main/XML%20Tree.png)
+## Validní XML
+- XML Soubor by měl být validní -> Měl by se řídit strukturou DTD (Document Type Definition) nebo XML Schema (Novější typ šablony)
+````
+<!DOCTYPE note
+[
+<!ELEMENT note (to,from,heading,body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+]>
+````
+- #PCDATA znamená <b>"Parseable Character Data"</b>
+- XML nevyžaduje DTD
+# Zdroje
+https://www.w3schools.com/
+https://github.com/JanBurle/UJEP/tree/main/KI-PRI
