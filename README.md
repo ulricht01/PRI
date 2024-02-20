@@ -73,5 +73,5 @@
 ## Návrh XML Stromu
 - XML nemá definovaný standardní model pro grafickou reprezentaci
 - Jako jednoduchý model pro naše účely budeme používat <br>
-![image text]([https://github.com/ulricht01/PRI/blob/main/XML%20Tree.png])
+![image text]([XML Tree.png])
 - 
