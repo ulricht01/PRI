@@ -89,5 +89,5 @@
 - #PCDATA znamená <b>"Parseable Character Data"</b>
 - XML nevyžaduje DTD
 # Zdroje
-https://www.w3schools.com/
+https://www.w3schools.com/ <br>
 https://github.com/JanBurle/UJEP/tree/main/KI-PRI
