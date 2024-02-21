@@ -1,4 +1,4 @@
-# 1.1 Značkovací jazyk XML 
+# 1. Značkovací jazyk XML 
 - XML = <b>eXtensible Markup Language</b>
 - Je to standard pro počítačová data, které je možné vyměňovat mezi různými platformami
 - Nepoužívá předdefinované tagy
@@ -11,7 +11,7 @@
   <body>Don't forget me this weekend!</body>
 </note>
 ````
-## Element
+## 1.1 Element
 - Vše v XML je element
 - Element může obsahovat
   - Text
@@ -56,7 +56,7 @@
   <f:length>120</f:length>
 </f:table>
 ````
-## Well-Formed XML
+## 1.2 Well-Formed XML
 - XML představuje velice jednoduchý formát kódu, jelikož je struktura téměř celá na vás
 - Existuje pouze pár pravidel XML syntaxe pro považování za Well-Formed
   1) <b>Musí obsahovat kořenový element (nemá sourozence, pouze děti)</b>
@@ -70,11 +70,11 @@
   9) <b>Bílé znaky nejsou ořezávány</b>
   10) <b>Přechod na nový řádek je pomocí znaku LF (line feed) - Na to je nutné si dát pozor ve Windows</b>
 - Pro otestování Well-Formed můžeme použít třeba https://www.w3schools.com/xml/xml_validator.asp</b>
-## Návrh XML Stromu
+## 1.3 Návrh XML Stromu
 - XML nemá definovaný standardní model pro grafickou reprezentaci
 - Jako jednoduchý model pro naše účely budeme používat <br>
 ![alt text](https://github.com/ulricht01/PRI/blob/main/XML%20Tree.png)
-## Validní XML
+## 1.4 Validní XML
 - XML Soubor by měl být validní -> Měl by se řídit strukturou DTD (Document Type Definition) nebo XML Schema (Novější typ šablony)
 ````
 <!DOCTYPE note
