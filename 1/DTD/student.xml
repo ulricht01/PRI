@@ -1,26 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE student SYSTEM "student.dtd">
 
-<!DOCTYPE student [
-
-<!ENTITY jmeno
-
-
-]>
-
-
-
-<student>
-    <jmeno>Tomas</jmeno>
-    <prijmeni>Ulrich</prijmeni>
-    <stud_cislo>st96132</stud_cislo>
-
-</student>
-
-
-Chtěl bych vytvořit webovou aplikaci pro záznam studentů naší univerzity.
- O studentovi zaznamenávejte informace: jméno, příjmení, studentské číslo, email, studijní rok, rozvrh, předměty,
-  splněné předměty a další zajímavé informace.
-
-
-Chtěl bych také zaznamenat fakulty univerzity. O každé fakultě zaznamenávejte informace jako: děkan, katedry,
- vedoucí kateder, zaměstnanci, kontakt na zaměstnance, pozice zaměstnanců, tituly a další zajímavé informace.
+<student id="1">
+    <jméno>Jan</jméno>
+    <příjmení>Novák</příjmení>
+    <studentské_číslo>123456</studentské_číslo>
+    <email>jan.novak@example.com</email>
+    <studijní_rok>2</studijní_rok>
+    <rozvrh>pondělí 8:00 - 12:00, středa 14:00 - 16:00</rozvrh>
+    <předměty>
+    <předmět>Matematika</předmět>
+    <předmět>Fyzika</předmět>
+    <!-- další předměty -->
+    </předměty>
+    <splněné_předměty>
+        <splněný_předmět>Anglický jazyk</splněný_předmět>
+        <!-- další splněné předměty -->
+    </splněné_předměty>
+ </student>    

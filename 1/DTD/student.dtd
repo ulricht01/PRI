@@ -1,0 +1,19 @@
+<!ELEMENT univerzita (student+)>
+
+<!ELEMENT student (jméno, příjmení, studentské_číslo, email, studijní_rok, rozvrh, předměty?, splněné_předměty?)>
+<!ATTLIST student
+    id ID #REQUIRED
+>
+
+<!ELEMENT jméno (#PCDATA)>
+<!ELEMENT příjmení (#PCDATA)>
+<!ELEMENT studentské_číslo (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT studijní_rok (#PCDATA)>
+<!ELEMENT rozvrh (#PCDATA)>
+
+<!ELEMENT předměty (předmět+)>
+<!ELEMENT předmět (#PCDATA)>
+
+<!ELEMENT splněné_předměty (předmět+)>
+<!ELEMENT splněný_předmět (#PCDATA)>
