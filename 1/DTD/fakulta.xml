@@ -1,0 +1,28 @@
+<!DOCTYPE fakulta SYSTEM "fakulta.dtd">
+
+<fakulta dekan="JménoDekana">
+    <katedra zkratka_katedry="ZK" webove_stranky="https://www.ujep.cz/cs/">
+        <vedoucí>
+            <jméno>JménoVedoucího</jméno>
+            <telefon>123456789</telefon>
+            <email>vedouci@katedra.cz</email>
+        </vedoucí>
+        <zaměstnanci>
+            <zaměstnanec>
+                <jméno>JménoZamestnance</jméno>
+                <telefon>987654321</telefon>
+                <email>zamestnanec@katedra.cz</email>
+                <pozice>docent</pozice>
+            </zaměstnanec>
+            <!-- další zaměstnanci -->
+        </zaměstnanci>
+        <předměty>
+            <předmět zkratka="MAT" typ="přednáška">
+                <název>Matematika</název>
+                <popis>Kurs všeobecné matematiky.</popis>
+            </předmět>
+            <!-- další předměty -->
+        </předměty>
+    </katedra>
+    <!-- další katedry -->
+</fakulta>
