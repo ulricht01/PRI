@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="univerzita">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="student" type="studentType" minOccours="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name= "studentType">
+    <xs:sequence>    
+        <xs:element name= "jméno" type="xs:string"/>
+        <xs:element name= "příjmení" type="xs:string"/>
+        <xs:element name= "studentské_číslo" type="xs:string"/>
+        <xs:element name= "email" type="xs:string"/>
+        <xs:element name= "studijni_rok" type="xs:string" />
+        <xs:element name= "rozvrh" type="xs:string"/>
+        <xs:element name= "předměty" type="předmětyType" minOccours="0"/>
+        <xs:element name= "splněné_předměty" type="splněné_předmětyType" minOccours="0"/>
+    </xs:sequence>
+    <xs:attribute name= "id" type= "xs:ID" use="required"/>
+</xs:complexType>
+
+<xs:element name= "předmětyType">
+    <xs:sequence>
+        <xs:element name="předmět" type="xs:string" minOccours="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:element>
+
+<xs:element name= "splněné_předmětyType">
+    <xs:sequence>
+        <xs:element name="splněný_předmět" type= "xs:string" minOccours="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:element>
+
+</xs:schema>
+
+
+

@@ -15,5 +15,5 @@
 <!ELEMENT předměty (předmět+)>
 <!ELEMENT předmět (#PCDATA)>
 
-<!ELEMENT splněné_předměty (předmět+)>
+<!ELEMENT splněné_předměty (splněný_předmět+)>
 <!ELEMENT splněný_předmět (#PCDATA)>
