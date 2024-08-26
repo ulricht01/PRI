@@ -243,5 +243,25 @@
     background-color: #68ff00;
 }
 
+#message-room {
+    color: green;
+    width: 100%;
+    text-align: center;
+    opacity: 1; /* Začíná s plnou neprůhledností */
+    transition: opacity 1s ease-in-out;}
 
+#message-room p {
+    display: inline-block; /* Aby <p> mělo šířku pouze podle obsahu */
+    width: 50%; /* Nastaví šířku <p> na 25% šířky #message-room */
+    height: 20%;
+    text-align: center; /* Vycentruje text uvnitř <p> */
+    border-width: 1px;
+    border: 0px solid #333;
+    background-color: #66ff00;
+    border-radius: 10px;
+    padding: 7px;
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+}
 

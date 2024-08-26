@@ -4,6 +4,7 @@ require INC . '/begin.php';
 require INC . '/db.php';
 
 $roomNumber = isset($_GET['roomNumber']) ? $_GET['roomNumber'] : null;
+$message = "";
 
 $data = getInfoPokoje($conn, $roomNumber);
 
@@ -12,11 +13,18 @@ if ($_SERVER['REQUEST_METHOD']== 'POST'){
     $occupied = isset($_POST['occupied-room']) ? 'Y' : 'N';
     updateInfoRoom($conn, $cleaned, $occupied, $roomNumber);
     $data = getInfoPokoje($conn, $roomNumber);
+    $message = "Úspěšně uloženo!";
 }
 
 ?>
 <body>
+<?php if ($message !== ""): ?>
+<div id="message-room">
+    <p><?php echo $message ?>
+</div>
+<?php endif; ?>
 <div class="wrapper">
+
     <?php if ($data): ?>
         <div class="room-details">
             <div class="room-number-room">Pokoj: <?php echo htmlspecialchars($data[0]['cislo_pokoje']); ?></div>
@@ -39,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST'){
         <div class="error">Pokoj nenalezen.</div>
     <?php endif; ?>
 </div>
+<script src="js/message-room.js"></script>
 </body>
 </html>
 
