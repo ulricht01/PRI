@@ -13,7 +13,7 @@ $i = 1;
             <div class="room-number">Pokoj:<?php echo htmlspecialchars($item['cislo_pokoje']); ?></div>
             <div class="floor">Patro:<?php echo htmlspecialchars($item['patro']); ?></div>
             <div class="status">
-                <div class="cleaned">Uklizeno:<?php if ($item['uklizeno'] == 'Y')
+                <div class="cleaned" data-uklizeno="<?php echo $item['uklizeno']?>">Uklizeno:<?php if ($item['uklizeno'] == 'Y')
                     {
                         echo "Ano";
                     }
@@ -22,7 +22,7 @@ $i = 1;
                         echo "Ne";
                     }?>
                 </div>
-                <div class="occupied">Obsazeno:<?php if($item['obsazeno'] == 'Y')
+                <div class="occupied" data-obsazeno="<?php echo $item['obsazeno']?>">Obsazeno:<?php if($item['obsazeno'] == 'Y')
                     {
                         echo "Ano";
                     }
@@ -35,7 +35,9 @@ $i = 1;
         </a>
         <?php endforeach; ?>
     </di>
-</div>  
+</div> 
+<script src="js/uklizeno.js"></script>
+<script src="js/obsazeno.js"></script>
 </body>
 </html>
 

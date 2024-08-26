@@ -1,3 +1,5 @@
+/* Login.php */
+
 .login-form-div {
     width: 100%;
     height: 50vh;
@@ -61,6 +63,7 @@
     width: 50%;
 }
 
+/* All */
 .footer-object {
     position: fixed;
     left: 0;
@@ -94,6 +97,8 @@
     background-color: #ccc; 
 }
 
+/* rooms.php */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -112,6 +117,18 @@
     border: 1px solid black;
     background-color: #e7e7e7;
     border-radius: 75px;
+}
+
+.grid-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+    /* Optional: Add some default styles */
+    display: block;
+    text-decoration: none;
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Scale up the element by 5% */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visual effect */
 }
 
 .wrapper {
@@ -180,5 +197,51 @@
     align-items: center;
     border: 1px solid black;
 }
+
+
+/* Room.php */
+
+.room-details{
+    font-family: monospace;
+}
+
+.form-group-room {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Vytvoří dva sloupce s rovnou šířkou */
+    gap: 20px; /* Volitelné: mezera mezi položkami */
+    justify-content: center; /* Vycentruje grid */
+    align-items: center; /* Vertikální zarovnání, pokud je potřeba */
+    
+}
+
+.form-group-room label {
+    font-size: 20px;    
+}
+
+.form-room {
+    display: flex;
+    flex-direction: column; /* Umožní zarovnání položek vertikálně */
+    align-items: center; /* Horizontální zarovnání na střed */
+    gap: 20px; /* Volitelné: mezera mezi položkami */
+}
+
+#submit-room{
+    border-radius: 5px;
+    border-width: 1px;
+    height: 5vh;
+    width: 10vh;
+    box-shadow: 0px 3px 3px 0px grey;
+    background-color: #e6e6e6;
+    font-family: monospace;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#submit-room:hover{
+    transition-duration: 0.3s;
+    width: 20vh;
+    background-color: #68ff00;
+}
+
 
 
