@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definice kořenového prvku 'seznam' -->
+    <xs:element name="seznam">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Definice prvku 'pokoj' -->
+                <xs:element name="pokoj" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Definice jednotlivých prvků v rámci 'pokoj' -->
+                            <xs:element name="id_pokoje" type="xs:integer" />
+                            <xs:element name="patro" type="xs:integer" />
+                            <xs:element name="cislo_pokoje" type="xs:integer" />
+                            <xs:element name="obsazeno">
+                                <!-- Definice jednoduchého typu pro 'obsazeno', povolené hodnoty 'Y' a 'N' -->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Y" />
+                                        <xs:enumeration value="N" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="uklizeno">
+                                <!-- Definice jednoduchého typu pro 'uklizeno', povolené hodnoty 'Y' a 'N' -->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Y" />
+                                        <xs:enumeration value="N" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="luzka" type="xs:integer" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

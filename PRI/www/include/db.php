@@ -111,4 +111,38 @@ if ($result->num_rows > 0) {
 }
 }
 
+function downloadXML_recepcni(mysqli $conn){
+    $sql = "SELECT * 
+            FROM recepcni";
+    $result = $conn->query($sql);
+
+// Zpracování výsledků do XML
+if ($result->num_rows > 0) {
+    $xml = new SimpleXMLElement('<seznam/>');
+    
+    while($row = $result->fetch_assoc()) {
+        $item = $xml->addChild('recepcni');
+        
+        // Přidejte jednotlivé sloupce jako elementy
+        foreach($row as $key => $value) {
+            $item->addChild($key, htmlspecialchars($value));
+        }
+    }
+
+    // Uložení XML do souboru
+    $xml->asXML('xml/recepcni.xml');
+
+    
+}
+}
+
+function validateXML($xml, $xsd){
+    if ($xml->schemaValidate($xsd)) {
+        $message = "XML je v pořádku.";
+    } else {
+        $message = "XML není v pořádku.";
+    }
+    return $message;
+}
+
 ?>

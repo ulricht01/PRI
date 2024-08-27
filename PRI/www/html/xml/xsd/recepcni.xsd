@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definice kořenového prvku 'seznam' -->
+    <xs:element name="seznam">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Definice prvku 'recepcni' -->
+                <xs:element name="recepcni" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Definice jednotlivých prvků v rámci 'recepcni' -->
+                            <xs:element name="id_recepcni" type="xs:integer"/>
+                            <xs:element name="jmeno" type="xs:string"/>
+                            <xs:element name="prijmeni" type="xs:string"/>
+                            <xs:element name="heslo" type="xs:string"/>
+                            <xs:element name="uz_jmeno" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

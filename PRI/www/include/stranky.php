@@ -9,6 +9,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
     $pages = [
         '/rooms.php' => 'Pokoje',
         '/volne_pokoje.php' => "Volné pokoje",
+        'recepcni.php' => "Recepční",
         '/logout.php' => 'Odhlásit',
     ];
 }

@@ -1,8 +1,6 @@
 - Javascript pro:
-    - Uklizeno/Obsazeno
     - Obsazený/neobsazený pokoj (v db se bude hlídat datum prijezdu/odjezdu):
         - Pokud bude aktuální datum mezi prijezdem a odjezdem -> Obsazeno
         - Pokud bude aktuální datum mimo -> Neobsazeno
-        - Podle obsazeno/neobsazeno bude barva pokoje červená/zelená
 
 
