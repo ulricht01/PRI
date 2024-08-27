@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '/var/www/prolog.php'; // Zahrnutí prologu
 require INC . '/begin.php';
 require INC . '/db.php';

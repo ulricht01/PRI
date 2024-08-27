@@ -18,7 +18,7 @@
 .login-form-div .login-form label {
     font-family: monospace;
     font-size: 24px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .login-form-div .login-form input[type="text"],
@@ -28,8 +28,8 @@
     border-radius: 5px;
     border: 1px solid black;
     text-align: center;
-    width: 100%; 
-    margin-bottom: 20px; 
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .login-form-div .login-form button {
@@ -42,22 +42,19 @@
     font-size: 24px;
 }
 
-.login-form-div .login-form input[type="text"]:hover
-{
+.login-form-div .login-form input[type="text"]:hover {
     background-color: rgba(128, 128, 128, 0.5);
     transition-duration: 0.5s;
 }
 
 
-.login-form-div .login-form input[type="password"]:hover
-{
+.login-form-div .login-form input[type="password"]:hover {
     background-color: rgba(128, 128, 128, 0.5);
     transition-duration: 0.5s;
 }
 
 
-.login-form-div .login-form button:hover
-{
+.login-form-div .login-form button:hover {
     background-color: rgb(6, 206, 6);
     transition-duration: 0.5s;
     width: 50%;
@@ -69,10 +66,10 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #333; 
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0; 
+    padding: 10px 0;
     font-family: monospace;
 }
 
@@ -84,17 +81,17 @@
 }
 
 .navigace-odkaz {
-    text-decoration: none; 
-    color: #333; 
+    text-decoration: none;
+    color: #333;
     font-weight: bold;
-    padding: 5px 10px; 
+    padding: 5px 10px;
     border-radius: 5px;
     background-color: #f0f0f0;
     transition: background-color 0.5s ease;
 }
 
 .navigace-odkaz:hover {
-    background-color: #ccc; 
+    background-color: #ccc;
 }
 
 /* rooms.php */
@@ -120,22 +117,26 @@
 }
 
 .grid-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for scaling */
     /* Optional: Add some default styles */
     display: block;
     text-decoration: none;
 }
 
 .grid-item:hover {
-    transform: scale(1.05); /* Scale up the element by 5% */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visual effect */
+    transform: scale(1.05);
+    /* Scale up the element by 5% */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional: Add shadow for better visual effect */
 }
 
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;;
+    height: 100%;
+    ;
 }
 
 .grid-container {
@@ -164,7 +165,8 @@
 }
 
 .room-number {
-    grid-column: 1 / span 2; /* Take both columns */
+    grid-column: 1 / span 2;
+    /* Take both columns */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +174,8 @@
 }
 
 .floor {
-    grid-column: 1 / span 2; /* Take both columns */
+    grid-column: 1 / span 2;
+    /* Take both columns */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,12 +188,14 @@
 .status {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column: 1 / span 2; /* Take both columns */
+    grid-column: 1 / span 2;
+    /* Take both columns */
     gap: 10px;
     font-size: 15px;
 }
 
-.cleaned, .occupied {
+.cleaned,
+.occupied {
     font-size: 14px;
     display: flex;
     justify-content: center;
@@ -201,31 +206,38 @@
 
 /* Room.php */
 
-.room-details{
+.room-details {
     font-family: monospace;
 }
 
 .form-group-room {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Vytvoří dva sloupce s rovnou šířkou */
-    gap: 20px; /* Volitelné: mezera mezi položkami */
-    justify-content: center; /* Vycentruje grid */
-    align-items: center; /* Vertikální zarovnání, pokud je potřeba */
-    
+    grid-template-columns: repeat(2, 1fr);
+    /* Vytvoří dva sloupce s rovnou šířkou */
+    gap: 20px;
+    /* Volitelné: mezera mezi položkami */
+    justify-content: center;
+    /* Vycentruje grid */
+    align-items: center;
+    /* Vertikální zarovnání, pokud je potřeba */
+
 }
 
 .form-group-room label {
-    font-size: 20px;    
+    font-size: 20px;
 }
 
 .form-room {
     display: flex;
-    flex-direction: column; /* Umožní zarovnání položek vertikálně */
-    align-items: center; /* Horizontální zarovnání na střed */
-    gap: 20px; /* Volitelné: mezera mezi položkami */
+    flex-direction: column;
+    /* Umožní zarovnání položek vertikálně */
+    align-items: center;
+    /* Horizontální zarovnání na střed */
+    gap: 20px;
+    /* Volitelné: mezera mezi položkami */
 }
 
-#submit-room{
+#submit-room {
     border-radius: 5px;
     border-width: 1px;
     height: 5vh;
@@ -237,7 +249,7 @@
     cursor: pointer;
 }
 
-#submit-room:hover{
+#submit-room:hover {
     transition-duration: 0.3s;
     width: 20vh;
     background-color: #68ff00;
@@ -247,14 +259,19 @@
     color: green;
     width: 100%;
     text-align: center;
-    opacity: 1; /* Začíná s plnou neprůhledností */
-    transition: opacity 1s ease-in-out;}
+    opacity: 1;
+    /* Začíná s plnou neprůhledností */
+    transition: opacity 1s ease-in-out;
+}
 
 #message-room p {
-    display: inline-block; /* Aby <p> mělo šířku pouze podle obsahu */
-    width: 50%; /* Nastaví šířku <p> na 25% šířky #message-room */
+    display: inline-block;
+    /* Aby <p> mělo šířku pouze podle obsahu */
+    width: 50%;
+    /* Nastaví šířku <p> na 25% šířky #message-room */
     height: 20%;
-    text-align: center; /* Vycentruje text uvnitř <p> */
+    text-align: center;
+    /* Vycentruje text uvnitř <p> */
     border-width: 1px;
     border: 0px solid #333;
     background-color: #66ff00;
@@ -265,16 +282,14 @@
     color: black;
 }
 
-.room-number-room
-{
+.room-number-room {
     text-align: center;
     margin-top: 50%;
     font-size: 25px;
     margin-bottom: 5%;
 }
 
-.floor-room
-{
+.floor-room {
     text-align: center;
     font-size: 15px;
     margin-bottom: 20px;
@@ -282,4 +297,33 @@
 
 input[type="checkbox"] {
     accent-color: black;
-    }
+}
+
+/* login.php */
+
+#message-login {
+    color: green;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    /* Začíná s plnou neprůhledností */
+    transition: opacity 1s ease-in-out;
+}
+
+#message-login p {
+    display: inline-block;
+    /* Aby <p> mělo šířku pouze podle obsahu */
+    width: 50%;
+    /* Nastaví šířku <p> na 25% šířky #message-room */
+    height: 20%;
+    text-align: center;
+    /* Vycentruje text uvnitř <p> */
+    border-width: 1px;
+    border: 0px solid #333;
+    background-color: #66ff00;
+    border-radius: 10px;
+    padding: 7px;
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+}

@@ -32,7 +32,7 @@ function login(mysqli $conn, string $username, string $password): bool
     $username = dbEscape($conn, $username);
     $password = dbEscape($conn, $password);
 
-    $query = "SELECT id FROM recepcni WHERE uz_jmeno=$username AND heslo=$password";
+    $query = "SELECT id_recepcni FROM recepcni WHERE uz_jmeno=$username AND heslo=$password";
 
     $result = dbQuery($conn, $query);
     // num rows -> počet řádků v proměnné

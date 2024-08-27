@@ -1,4 +1,6 @@
 <?php
+ob_start();
+session_start();
 require '/var/www/prolog.php'; // Zahrnutí prologu
 require INC . '/begin.php';
 require INC . '/db.php';
@@ -14,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD']== 'POST'){
     updateInfoRoom($conn, $cleaned, $occupied, $roomNumber);
     $data = getInfoPokoje($conn, $roomNumber);
     $message = "Úspěšně uloženo!";
+    header("Location: rooms.php");
+    exit;
 }
 
 ?>
@@ -51,4 +55,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST'){
 </body>
 </html>
 
-<?php require INC . '/end.php'; ?>
+<?php 
+require INC . '/end.php';
+ob_end_flush();
+ ?>

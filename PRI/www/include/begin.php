@@ -10,7 +10,6 @@
         Rezervační systém
     </title>
 </head>
-
 <?php require INC . '/nav.php'; ?>
 
 <hr>
