@@ -292,6 +292,11 @@
 .floor-room {
     text-align: center;
     font-size: 15px;
+}
+
+.bed-room {
+    text-align: center;
+    font-size: 15px;
     margin-bottom: 20px;
 }
 
@@ -326,4 +331,28 @@ input[type="checkbox"] {
     font-family: monospace;
     font-size: 20px;
     color: black;
+}
+
+/* volne_pokoje.php */
+.table-volne-pokoje {
+    margin: 5%;
+    font-family: monospace;
+}
+
+.table-volne-pokoje :hover {
+    scale: 1.03;
+    transition: 0.5s;
+}
+
+.table-volne-pokoje th {
+    background-color: #33333391;
+    width: 5%;
+    font-size: 15px;
+    color: white;
+}
+
+.table-volne-pokoje td {
+    background-color: #facdcd;
+    text-align: center;
+    font-size: 12px;
 }

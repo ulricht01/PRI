@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+    header("Location: login.php");
+}
 require '/var/www/prolog.php'; // Zahrnutí prologu
 require INC . '/begin.php';
 require INC . '/db.php';

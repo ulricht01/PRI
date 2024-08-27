@@ -1,6 +1,11 @@
 <?php
 ob_start();
 session_start();
+
+if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+    header("Location: login.php");
+}
+
 require '/var/www/prolog.php'; // Zahrnutí prologu
 require INC . '/begin.php';
 require INC . '/db.php';
@@ -33,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST'){
         <div class="room-details">
             <div class="room-number-room">Pokoj: <?php echo htmlspecialchars($data[0]['cislo_pokoje']); ?></div>
             <div class="floor-room">Patro: <?php echo htmlspecialchars($data[0]['patro']); ?></div>
+            <div class="bed-room">Lůžek: <?php echo htmlspecialchars($data[0]['luzka']); ?></div>
             <form method="POST" action="" class="form-room">
                 <div class="form-group-room">
                     <label for="cleaned-room">

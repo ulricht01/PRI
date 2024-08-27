@@ -5,6 +5,7 @@ require '/var/www/prolog.php'; // Zahrnutí prologu
 require INC . '/begin.php';
 require INC . '/db.php';
 
+
 $message = "";
 
 if ($_SERVER['REQUEST_METHOD']== 'POST'){

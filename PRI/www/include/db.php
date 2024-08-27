@@ -79,6 +79,36 @@ function updateInfoRoom(mysqli $conn, string $cleaned, string $occupied, $id_pok
 
     $query = "UPDATE pokoje SET uklizeno=$cleaned, obsazeno=$occupied WHERE id_pokoje=$id_pokoje";
     dbQuery($conn, $query);
+    downloadXML($conn);
+}
+
+function downloadXML(mysqli $conn){
+    $sql = "SELECT * 
+            FROM pokoje
+            WHERE obsazeno = 'N'
+            AND uklizeno = 'Y'";
+    $result = $conn->query($sql);
+
+// Zpracování výsledků do XML
+if ($result->num_rows > 0) {
+    $xml = new SimpleXMLElement('<seznam/>');
+    
+    while($row = $result->fetch_assoc()) {
+        $item = $xml->addChild('pokoj');
+        
+        // Přidejte jednotlivé sloupce jako elementy
+        foreach($row as $key => $value) {
+            $item->addChild($key, htmlspecialchars($value));
+        }
+    }
+
+    // Uložení XML do souboru
+    $xml->asXML('xml/volne_pokoje.xml');
+
+    echo 'Data byla úspěšně exportována do XML.';
+} else {
+    echo "Žádné výsledky.";
+}
 }
 
 ?>
